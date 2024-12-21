@@ -108,6 +108,15 @@ p {
   border: 1px solid #fa7436;
   color: #ffffff;
 }
+.start-icon {
+  width: 16px;
+}
+.location-icon {
+  width: 12px;
+}
+.navigation-icon {
+  font-size: 18px;
+}
 .text-center {
   text-align: center;
 }
@@ -205,7 +214,7 @@ p {
 .swiper-button-prev:hover {
   color: #cccccd;
 }
-.swiper-slide img {
+.swiper-slide .image-box img {
   width: 100%;
 }
 .swiper-slide h5 {

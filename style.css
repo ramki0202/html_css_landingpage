@@ -22,6 +22,9 @@ p,
 a {
   font-family: "Poppins", sans-serif;
 }
+p {
+  font-weight: 500;
+}
 h3,
 h4 {
   font-family: "Poppins", sans-serif;
@@ -55,6 +58,12 @@ h4 {
 }
 .hero-items img {
   width: 100%;
+}
+.rg-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 section h2 {
   color: #333;
@@ -167,6 +176,11 @@ p {
   background-color: #f7f8fc;
   padding: 120px 0;
 }
+.testimonial {
+  background-color: #f7f8fc;
+  padding: 120px 0;
+  margin-top: 120px;
+}
 .features .top {
   text-align: center;
 }
@@ -206,13 +220,52 @@ p {
   border-radius: 10px;
   font-family: poppins;
 }
+/* General Navigation Button Styles */
+.swiper-button-prev,
 .swiper-button-next,
-.swiper-button-prev {
-  color: #585858;
+.swiper2-button-prev,
+.swiper2-button-next,
+.swiper3-button-prev,
+.swiper3-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5); /* Adjust for visibility */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 50%;
 }
+
+/* Positioning for Buttons */
+.swiper-button-prev,
+.swiper2-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next,
+.swiper2-button-next {
+  right: 10px;
+}
+
+/* Add hover effect for better UX */
+.swiper-button-prev:hover,
 .swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: #cccccd;
+.swiper2-button-prev:hover,
+.swiper2-button-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.swiper2-button-prev::after {
+  content: "\e5c4"; /* Left arrow */
+}
+
+.swiper2-button-next::after {
+  content: "\e5c8"; /* Right arrow */
 }
 .swiper-slide .image-box img {
   width: 100%;
@@ -294,6 +347,95 @@ p {
 
 .image-box:hover {
   box-shadow: 0px 16px 80px 0px rgba(254, 147, 94, 0.2); /* Add shadow effect on hover */
+}
+.testimonials-wrapper {
+  padding: 30px;
+}
+.testimonials-wrapper p {
+  font-weight: 400;
+}
+
+/* Container Styling */
+.newsletter-container {
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  background-image: url(images/background-news.png);
+  background-size: cover;
+  background-position: center center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heading */
+.newsletter-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Subtext */
+.newsletter-container p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Input with Button */
+.input-with-button {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Input Field */
+.input-with-button input[type="email"] {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+.input-with-button input[type="email"]::placeholder {
+  color: #888;
+}
+
+/* Button Inside Input */
+.input-with-button button {
+  padding: 15px 25px;
+  font-size: 14px;
+  color: #fff;
+  background: #fa7436;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.input-with-button button:hover {
+  background: #ff9d70;
+}
+
+/* Privacy Text */
+.privacy-text {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
 }
 
 @media (max-width: 768px) {
